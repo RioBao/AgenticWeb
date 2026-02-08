@@ -10,6 +10,12 @@ function setText(id, value) {
   if (el) el.textContent = value;
 }
 
+function formatCount(value) {
+  const num = Number(value);
+  if (!Number.isFinite(num)) return "—";
+  return num.toLocaleString();
+}
+
 function renderCards(cards) {
   const container = document.getElementById("trending-cards");
   container.innerHTML = "";
@@ -29,6 +35,7 @@ function renderCards(cards) {
 function renderLists(lists) {
   const trending = document.getElementById("trending-list");
   const established = document.getElementById("established-list");
+  if (!trending || !established) return;
   trending.innerHTML = "";
   established.innerHTML = "";
   lists.trending.forEach(name => {
@@ -72,6 +79,11 @@ function updateCharts(sourceName) {
   const topData = source.top;
   const trendData = source.trending;
 
+  const topTitle = document.getElementById("top-title");
+  const trendTitle = document.getElementById("trend-title");
+  if (topTitle) topTitle.textContent = `Top MCPs (${sourceName})`;
+  if (trendTitle) trendTitle.textContent = `Trending MCPs (${sourceName})`;
+
   if (state.topChart) state.topChart.destroy();
   if (state.trendChart) state.trendChart.destroy();
 
@@ -85,22 +97,30 @@ function updateCharts(sourceName) {
 function renderSources(sourceNames) {
   const list = document.getElementById("source-list");
   list.innerHTML = "";
-  sourceNames.forEach(name => {
+  const ordered = sourceNames.filter(n => n !== "All Sources");
+  ordered.forEach(name => {
     const source = state.data.sources[name];
     const btn = document.createElement("button");
     btn.className = "source-chip";
+    btn.dataset.source = name;
     btn.innerHTML = `
       <span class="source-icon"><img src="${source.logo}" alt="${name} logo"></span>
-      <span>${name}</span>
+      <span class="source-name">${name}</span>
+      <span class="source-count">${formatCount(source.count)}</span>
     `;
     btn.onclick = () => {
+      const isActive = btn.classList.contains("active");
+      const target = isActive && state.data.sources["All Sources"] ? "All Sources" : name;
       document.querySelectorAll(".source-chip").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      updateCharts(name);
+      if (target !== "All Sources") {
+        const next = list.querySelector(`[data-source="${target}"]`);
+        if (next) next.classList.add("active");
+      }
+      updateCharts(target);
     };
     list.appendChild(btn);
   });
-  list.firstChild.classList.add("active");
+  if (list.firstChild) list.firstChild.classList.add("active");
 }
 
 function setupReadMore() {
@@ -128,6 +148,7 @@ fetch("assets/data.json")
 
     const sources = Object.keys(data.sources);
     renderSources(sources);
-    updateCharts(sources[0]);
+    const initial = sources.includes("All Sources") ? "All Sources" : sources[0];
+    updateCharts(initial);
     setupReadMore();
   });

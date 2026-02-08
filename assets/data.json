@@ -33,8 +33,27 @@
     "established": ["Atlas MCP", "Sentinel MCP", "Harbor MCP", "Vector MCP"]
   },
   "sources": {
-    "Official Registry": {
-      "logo": "assets/logos/registry.svg",
+    "All Sources": {
+      "logo": "assets/logos/mcp.svg",
+      "count": 312,
+      "top": [
+        {"name": "Atlas MCP", "value": 82},
+        {"name": "Sentinel MCP", "value": 74},
+        {"name": "Harbor MCP", "value": 63},
+        {"name": "Vector MCP", "value": 52},
+        {"name": "Relay MCP", "value": 41}
+      ],
+      "trending": [
+        {"name": "Conduit MCP", "value": 24},
+        {"name": "Trace MCP", "value": 20},
+        {"name": "Relay MCP", "value": 18},
+        {"name": "Fuse MCP", "value": 15},
+        {"name": "Quill MCP", "value": 12}
+      ]
+    },
+    "Official MCP Registry": {
+      "logo": "assets/logos/Registry.png",
+      "count": 312,
       "top": [
         {"name": "Atlas MCP", "value": 82},
         {"name": "Sentinel MCP", "value": 74},
@@ -52,6 +71,7 @@
     },
     "ai.smithery": {
       "logo": "assets/logos/smithery.svg",
+      "count": 148,
       "top": [
         {"name": "Sentinel MCP", "value": 66},
         {"name": "Atlas MCP", "value": 61},
@@ -69,6 +89,7 @@
     },
     "glama": {
       "logo": "assets/logos/glama.svg",
+      "count": 203,
       "top": [
         {"name": "Harbor MCP", "value": 71},
         {"name": "Atlas MCP", "value": 65},
@@ -86,6 +107,7 @@
     },
     "Anthropic MCPs": {
       "logo": "assets/logos/anthropic.svg",
+      "count": 97,
       "top": [
         {"name": "Atlas MCP", "value": 77},
         {"name": "Sentinel MCP", "value": 70},
@@ -103,6 +125,7 @@
     },
     "OpenAI MCPs": {
       "logo": "assets/logos/openai.svg",
+      "count": 523,
       "top": [
         {"name": "Sentinel MCP", "value": 79},
         {"name": "Atlas MCP", "value": 68},
