@@ -51,16 +51,17 @@ function createChart(ctx, label, data) {
       datasets: [{
         label,
         data: data.map(d => d.value),
-        backgroundColor: "#ae3d2e",
+        backgroundColor: "#0ea5a0",
         borderRadius: 6
       }]
     },
     options: {
+      indexAxis: "y",
       responsive: true,
       plugins: { legend: { display: false } },
       scales: {
-        x: { ticks: { color: "#6a655f" }, grid: { display: false } },
-        y: { ticks: { color: "#6a655f" }, grid: { color: "#eee6db" } }
+        x: { ticks: { color: "#5b6674" }, grid: { color: "#e9eef3" } },
+        y: { ticks: { color: "#5b6674" }, grid: { display: false } }
       }
     }
   });
@@ -85,9 +86,13 @@ function renderSources(sourceNames) {
   const list = document.getElementById("source-list");
   list.innerHTML = "";
   sourceNames.forEach(name => {
+    const source = state.data.sources[name];
     const btn = document.createElement("button");
     btn.className = "source-chip";
-    btn.textContent = name;
+    btn.innerHTML = `
+      <span class="source-icon"><img src="${source.logo}" alt="${name} logo"></span>
+      <span>${name}</span>
+    `;
     btn.onclick = () => {
       document.querySelectorAll(".source-chip").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");

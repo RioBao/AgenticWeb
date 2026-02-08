@@ -6,7 +6,7 @@
   <title>MCP Ecosystem Map — Weekly Pulse</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -108,9 +108,13 @@
       <aside id="analytics" class="right">
         <div class="panel sticky">
           <h2>Analytics</h2>
-          <div class="source-picker">
-            <div class="label">Sources</div>
-            <div id="source-list" class="source-list"></div>
+
+          <div class="source-panel">
+            <div class="source-header">
+              <h3>Source Coverage</h3>
+              <div class="source-sub">Scrollable list with icons</div>
+            </div>
+            <div id="source-list" class="source-list scroll"></div>
           </div>
 
           <div class="chart-block">
