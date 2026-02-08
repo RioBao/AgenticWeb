@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MCP Ecosystem Map — Weekly Pulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">MCP</div>
+      <div class="brand-text">
+        <div class="title">MCP Ecosystem Map</div>
+        <div class="subtitle">Weekly pulse, neutral analysis, transparent data.</div>
+      </div>
+    </div>
+    <nav class="tabs">
+      <a href="#news">News</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="news" class="hero">
+      <div class="hero-left">
+        <div class="eyebrow">This Week in the MCP Ecosystem</div>
+        <h1>A neutral, data-driven view of what’s gaining traction, what’s fading, and why it matters.</h1>
+        <div class="meta">
+          <span>Week 01</span>
+          <span>Published: Feb 8, 2026</span>
+          <span>Sources: 5</span>
+        </div>
+
+        <div class="trending-grid" id="trending-cards">
+          <!-- Cards injected by script.js -->
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="panel">
+          <h2>Ecosystem Pulse</h2>
+          <div class="metrics">
+            <div class="metric">
+              <div class="metric-label">MCPs tracked</div>
+              <div class="metric-value" id="metric-tracked">—</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">New this week</div>
+              <div class="metric-value" id="metric-new">—</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Active MCPs</div>
+              <div class="metric-value" id="metric-active">—</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Registries</div>
+              <div class="metric-value" id="metric-registries">—</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content">
+      <div class="left">
+        <div class="news-block">
+          <h2>Weekly Insight Highlights</h2>
+          <p>
+            Usage is consolidating faster than registry growth — top MCPs now account for a growing share of observed activity.
+            The median MCP is newer, but sustained usage is concentrating in a smaller number of tools.
+          </p>
+          <p class="muted" id="news-more">
+            Meanwhile, new entrants are disproportionately clustering around automation and data connectors. The gap between
+            experimentation and sustained adoption continues to widen, emphasizing the need for neutral, repeatable measurement.
+          </p>
+          <button class="text-button" id="toggle-news">Read more</button>
+        </div>
+
+        <div class="columns">
+          <div class="col">
+            <h3>Trending Now</h3>
+            <ul id="trending-list"></ul>
+          </div>
+          <div class="col">
+            <h3>Established Leaders</h3>
+            <ul id="established-list"></ul>
+          </div>
+        </div>
+
+        <div class="coverage">
+          <h2>Coverage & Transparency</h2>
+          <p>Sources: Official MCP Registry, ai.smithery, glama, Anthropic MCPs, OpenAI MCPs.</p>
+          <p class="muted">Methodology & data → (coming soon)</p>
+        </div>
+
+        <div class="cta">
+          <a class="primary" href="#">Read the full weekly report →</a>
+          <a class="secondary" href="#analytics">Explore the analytics dashboard →</a>
+        </div>
+      </div>
+
+      <aside id="analytics" class="right">
+        <div class="panel sticky">
+          <h2>Analytics</h2>
+          <div class="source-picker">
+            <div class="label">Sources</div>
+            <div id="source-list" class="source-list"></div>
+          </div>
+
+          <div class="chart-block">
+            <h3>Top MCPs</h3>
+            <canvas id="topChart" height="180"></canvas>
+          </div>
+
+          <div class="chart-block">
+            <h3>Trending MCPs</h3>
+            <canvas id="trendChart" height="180"></canvas>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>
+        The MCP Ecosystem Map is a weekly, public snapshot of adoption and momentum. We publish on a consistent cadence and
+        prioritize transparent sourcing over hype.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2026 MCP Ecosystem Map</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

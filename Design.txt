@@ -1,0 +1,13 @@
+Classical design 
+*header with title and tab selection. We start with the "News", "Analytics" and "About" tabs/sections  
+
+*Two columns, left, right
+
+*Left: 
+Largest section (2/3rds of the screen), shows the "news". First paragraph of text and a graphic, user has to click on "read more" to read the rest
+
+*Right: 
+Analytics section. Scrollable and selectable list with our sources (Registry, smithery, openAI, etc..) 
+Bar plot with "Top MCPs". Changes based on what source is selected in the source list. 
+Bar plot with "trending MCPs". Changes based on what source is selected in the source list.  
+

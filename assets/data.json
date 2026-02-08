@@ -1,0 +1,117 @@
+﻿{
+  "meta": {
+    "week": "01",
+    "published": "2026-02-08",
+    "sources": 5,
+    "tracked": 312,
+    "new": 14,
+    "active": "68%",
+    "registries": 5
+  },
+  "trending_cards": [
+    {
+      "name": "Conduit MCP",
+      "desc": "Unified connector for SQL and vector stores.",
+      "signal": "+24% usage",
+      "why": "New batch ingestion launched across 3 registries."
+    },
+    {
+      "name": "Relay MCP",
+      "desc": "Agent-to-agent task handoff protocol.",
+      "signal": "↑ +8 rank",
+      "why": "Adopted by two high-traffic orchestration stacks."
+    },
+    {
+      "name": "Trace MCP",
+      "desc": "Cross-platform run telemetry.",
+      "signal": "New entrant",
+      "why": "Crossed activity threshold in first full week."
+    }
+  ],
+  "lists": {
+    "trending": ["Conduit MCP", "Relay MCP", "Trace MCP", "Fusion MCP"],
+    "established": ["Atlas MCP", "Sentinel MCP", "Harbor MCP", "Vector MCP"]
+  },
+  "sources": {
+    "Official Registry": {
+      "top": [
+        {"name": "Atlas MCP", "value": 82},
+        {"name": "Sentinel MCP", "value": 74},
+        {"name": "Harbor MCP", "value": 63},
+        {"name": "Vector MCP", "value": 52},
+        {"name": "Relay MCP", "value": 41}
+      ],
+      "trending": [
+        {"name": "Conduit MCP", "value": 24},
+        {"name": "Trace MCP", "value": 20},
+        {"name": "Relay MCP", "value": 18},
+        {"name": "Fuse MCP", "value": 15},
+        {"name": "Quill MCP", "value": 12}
+      ]
+    },
+    "ai.smithery": {
+      "top": [
+        {"name": "Sentinel MCP", "value": 66},
+        {"name": "Atlas MCP", "value": 61},
+        {"name": "Vector MCP", "value": 49},
+        {"name": "Harbor MCP", "value": 45},
+        {"name": "Relay MCP", "value": 39}
+      ],
+      "trending": [
+        {"name": "Relay MCP", "value": 22},
+        {"name": "Conduit MCP", "value": 18},
+        {"name": "Quill MCP", "value": 16},
+        {"name": "Trace MCP", "value": 13},
+        {"name": "Forge MCP", "value": 11}
+      ]
+    },
+    "glama": {
+      "top": [
+        {"name": "Harbor MCP", "value": 71},
+        {"name": "Atlas MCP", "value": 65},
+        {"name": "Sentinel MCP", "value": 62},
+        {"name": "Vector MCP", "value": 55},
+        {"name": "Relay MCP", "value": 42}
+      ],
+      "trending": [
+        {"name": "Trace MCP", "value": 21},
+        {"name": "Conduit MCP", "value": 19},
+        {"name": "Relay MCP", "value": 16},
+        {"name": "Quill MCP", "value": 14},
+        {"name": "Fuse MCP", "value": 10}
+      ]
+    },
+    "Anthropic MCPs": {
+      "top": [
+        {"name": "Atlas MCP", "value": 77},
+        {"name": "Sentinel MCP", "value": 70},
+        {"name": "Harbor MCP", "value": 58},
+        {"name": "Vector MCP", "value": 46},
+        {"name": "Relay MCP", "value": 40}
+      ],
+      "trending": [
+        {"name": "Conduit MCP", "value": 23},
+        {"name": "Trace MCP", "value": 17},
+        {"name": "Relay MCP", "value": 15},
+        {"name": "Quill MCP", "value": 12},
+        {"name": "Fuse MCP", "value": 9}
+      ]
+    },
+    "OpenAI MCPs": {
+      "top": [
+        {"name": "Sentinel MCP", "value": 79},
+        {"name": "Atlas MCP", "value": 68},
+        {"name": "Harbor MCP", "value": 60},
+        {"name": "Vector MCP", "value": 53},
+        {"name": "Relay MCP", "value": 44}
+      ],
+      "trending": [
+        {"name": "Trace MCP", "value": 22},
+        {"name": "Conduit MCP", "value": 19},
+        {"name": "Relay MCP", "value": 17},
+        {"name": "Quill MCP", "value": 13},
+        {"name": "Forge MCP", "value": 10}
+      ]
+    }
+  }
+}
